@@ -127,5 +127,18 @@ app.patch('/api/team-members/:id', requireRole('admin', 'safety_manager'), async
   } catch (error) { next(error); }
 });
 
-app.use((error, _req, res, _next) => { console.error(error); res.status(500).json({ error: 'Server error' }); });
-initDatabase().then(() => app.listen(PORT, () => console.log(`Tactivo local API listening on http://localhost:${PORT}`))).catch((error) => { console.error('Unable to initialize PostgreSQL:', error.message); process.exit(1); });
+app.use((error, _req, res, _next) => {
+  console.error(error);
+  if (error?.code === 'ECONNREFUSED' || error?.code === 'ECONNRESET' || error?.code === '57P01') {
+    return res.status(503).json({ error: 'PostgreSQL is unavailable. Start PostgreSQL and check DATABASE_URL.' });
+  }
+  return res.status(500).json({ error: 'Server error' });
+});
+
+// The API is mounted by the Next.js custom server in production and development.
+// Keep direct execution working for local API-only debugging as well.
+module.exports = { app, pool, initDatabase };
+
+if (require.main === module) {
+  initDatabase().then(() => app.listen(PORT, () => console.log(`Tactivo local API listening on http://localhost:${PORT}`))).catch((error) => { console.error('Unable to initialize PostgreSQL:', error.message); process.exit(1); });
+}

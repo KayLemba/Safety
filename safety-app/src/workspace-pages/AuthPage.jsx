@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { ArrowRight, Building2, Eye, EyeOff, KeyRound, Lock, Mail, ShieldCheck, User } from "lucide-react";
-import tactivoLogo from "../assets/tactivo-logo.png";
 
 const ROLE_OPTIONS = [
   { value: "technician", label: "Field technician" },
@@ -40,7 +39,7 @@ export default function AuthPage({ onAuthenticated }) {
       <section className="auth-card">
         <div className="auth-hero">
           <div className="auth-hero-glow" />
-          <div className="auth-brand-row"><img src={tactivoLogo} alt="Tactivo Technologies" /><span>SAFETY OPERATIONS</span></div>
+          <div className="auth-brand-row"><img className="t-logo-image" src="/tactivo-t-mark.png" alt="Tactivo" /></div>
           <span className="eyebrow">{heroLine}</span>
           <h1 className="auth-hero-title">TACTIVO <span>Safety</span></h1>
           <svg className="auth-wave" viewBox="0 0 500 60" preserveAspectRatio="none" aria-hidden="true">
