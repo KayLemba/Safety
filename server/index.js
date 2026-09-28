@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = Number(process.env.API_PORT || 4000);
-const DATABASE_URL = process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/tactivo_safety';
+const DATABASE_URL = process.env.DATABASE_URL || 'postgresql://tactivo:tactivo@localhost:5432/tactivo_safety';
 const SESSION_COOKIE = 'tactivo_session';
 const pool = new Pool({ connectionString: DATABASE_URL });
 const app = express();
