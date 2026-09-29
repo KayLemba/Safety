@@ -916,14 +916,16 @@ export default function Home({ user, onLogout }) {
       .primary-button:disabled * {
         color: #ffffff;
       }
-      [data-theme="dark"] .workspace-panel button,
-      [data-theme="dark"] .workspace-panel button *,
-      [data-theme="dark"] .audit-page button,
-      [data-theme="dark"] .audit-page button *,
-      [data-theme="dark"] .directory-page button,
-      [data-theme="dark"] .directory-page button *,
-      [data-theme="dark"] .notifications-page button,
-      [data-theme="dark"] .notifications-page button * {
+      [data-theme="dark"] .workspace-panel .secondary-button,
+      [data-theme="dark"] .workspace-panel .secondary-button *,
+      [data-theme="dark"] .notifications-page .secondary-button,
+      [data-theme="dark"] .notifications-page .secondary-button * {
+        color: #000000;
+      }
+      [data-theme="dark"] .workspace-panel .primary-button,
+      [data-theme="dark"] .workspace-panel .primary-button *,
+      [data-theme="dark"] .notifications-page .primary-button,
+      [data-theme="dark"] .notifications-page .primary-button * {
         color: #ffffff;
       }
       /* Add/Edit Record modal — Cancel button: white in dark mode, black (default) in light mode. */
