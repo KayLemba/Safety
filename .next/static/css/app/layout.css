@@ -952,3 +952,71 @@ html:not([data-theme="dark"]) .sidebar-collapse-row .sidebar-toggle svg {
   color: #111318 !important;
 }
 
+/* ---------- CCTV induction + document vault ---------- */
+.induction-page, .documents-page { display:grid; grid-gap:18px; gap:18px; }
+.induction-actions { display:flex; gap:9px; flex-wrap:wrap; justify-content:flex-end; }
+.induction-card { background:var(--card); border:1px solid var(--line); border-radius:18px; box-shadow:0 10px 26px rgba(67,12,41,.05); overflow:hidden; }
+.form-section { padding:24px; border-bottom:1px solid var(--line); }
+.form-section:last-of-type { border-bottom:0; }
+.section-title { display:flex; align-items:center; gap:11px; margin-bottom:18px; color:var(--brand-700); }
+.section-title > svg { flex:0 0 auto; }
+.section-title div { display:grid; grid-gap:3px; gap:3px; }
+.section-title span { font-size:9px; font-weight:900; letter-spacing:.9px; }
+.section-title strong { color:var(--ink); font-size:16px; }
+.form-grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); grid-gap:14px; gap:14px; }
+.form-grid-2 > label { color:var(--ink); display:grid; grid-gap:7px; gap:7px; font-size:11px; font-weight:800; }
+.form-grid-2 input { background:var(--paper); border:1px solid var(--line); border-radius:9px; color:var(--ink); font-size:12px; padding:11px 12px; outline:0; width:100%; }
+.form-grid-2 input:focus { border-color:var(--brand-500); box-shadow:0 0 0 3px rgba(173,42,96,.12); }
+.induction-copy { color:var(--muted); font-size:11px; line-height:1.65; }
+.induction-copy h4 { color:var(--ink); font-size:12px; margin:18px 0 8px; }
+.induction-copy h4:first-child { margin-top:0; }
+.induction-copy p { margin:7px 0; }
+.induction-copy ul { margin:7px 0 12px; padding-left:19px; }
+.declaration { background:var(--brand-pale); border:1px solid var(--brand-pale-line); border-radius:11px; color:var(--ink); font-size:11px; line-height:1.65; margin:0 0 17px; padding:14px; }
+.signature-field { min-width:0; }
+.signature-label { align-items:center; color:var(--ink); display:flex; font-size:11px; font-weight:800; justify-content:space-between; margin-bottom:7px; }
+.text-button { background:none; border:0; color:var(--brand-600); cursor:pointer; font-size:10px; font-weight:800; padding:4px; }
+.signature-pad-wrap { background:#fff; border:1px dashed #aebfc5; border-radius:10px; height:128px; overflow:hidden; position:relative; touch-action:none; }
+.signature-pad { cursor:crosshair; display:block; height:100%; position:relative; touch-action:none; width:100%; z-index:2; }
+.signature-placeholder { color:#9aacb1; font-size:10px; left:50%; pointer-events:none; position:absolute; top:50%; transform:translate(-50%,-50%); z-index:1; }
+.check-list { display:grid; grid-gap:9px; gap:9px; }
+.check-row { align-items:center; background:var(--paper); border:1px solid var(--line); border-radius:9px; color:var(--ink); display:flex; font-size:11px; gap:10px; padding:11px 13px; }
+.check-row input { accent-color:var(--brand-600); height:16px; width:16px; }
+.safety-reminder { align-items:flex-start; background:var(--mint-bg); border-top:1px solid #cdeadd; color:#1c6b52; display:flex; gap:12px; padding:18px 24px; }
+.safety-reminder div { display:grid; grid-gap:4px; gap:4px; }
+.safety-reminder strong { font-size:11px; letter-spacing:.5px; }
+.safety-reminder span, .safety-reminder small { font-size:10px; line-height:1.5; }
+.sticky-save { align-items:center; background:var(--paper); border-top:1px solid var(--line); display:flex; gap:12px; justify-content:space-between; padding:14px 24px; position:-webkit-sticky; position:sticky; bottom:0; z-index:3; }
+.sticky-save span { color:var(--muted); font-size:10px; }
+.attendance-table { border:1px solid var(--line); border-radius:11px; overflow:auto; margin-bottom:12px; }
+.attendance-head, .attendance-row { display:grid; grid-template-columns:42px 1.5fr 1.1fr 120px 1.3fr; min-width:760px; }
+.attendance-head { background:var(--paper); color:var(--muted); font-size:9px; font-weight:900; letter-spacing:.4px; padding:10px; text-transform:uppercase; }
+.attendance-row { align-items:center; border-top:1px solid var(--line); gap:8px; padding:8px; }
+.attendance-row > span { color:var(--muted); font-size:10px; text-align:center; }
+.attendance-row input { background:var(--card); border:1px solid var(--line); border-radius:7px; color:var(--ink); font-size:10px; min-width:0; padding:8px; }
+.attendance-row .signature-field { min-width:170px; }
+.attendance-row .signature-label { display:none; }
+.attendance-row .signature-pad-wrap { height:54px; }
+.upload-drop { align-items:center; background:var(--brand-pale); border:1px dashed var(--brand-pale-line); border-radius:15px; color:var(--brand-700); cursor:pointer; display:flex; flex-direction:column; gap:7px; justify-content:center; min-height:180px; text-align:center; }
+.upload-drop strong { color:var(--ink); font-size:14px; }
+.upload-drop span { color:var(--muted); font-size:10px; }
+.document-grid { display:grid; grid-gap:12px; gap:12px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.document-card { align-items:center; background:var(--card); border:1px solid var(--line); border-radius:13px; display:grid; grid-gap:12px; gap:12px; grid-template-columns:42px minmax(0,1fr) auto; padding:14px; }
+.document-icon { align-items:center; background:var(--brand-pale); border-radius:10px; color:var(--brand-700); display:grid; height:42px; place-items:center; width:42px; }
+.document-card > div:nth-child(2) { min-width:0; }
+.document-card strong { color:var(--ink); display:block; font-size:11px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.document-card span { color:var(--muted); display:block; font-size:9px; margin-top:4px; }
+.document-actions { align-items:center; display:flex; gap:6px; }
+.document-actions a { text-decoration:none; }
+@media (max-width: 760px) {
+  .form-section { padding:18px 15px; }
+  .form-grid-2, .document-grid { grid-template-columns:1fr; }
+  .page-intro { align-items:flex-start; flex-direction:column; }
+  .induction-actions { justify-content:flex-start; width:100%; }
+  .induction-actions button { flex:1 1; }
+  .sticky-save { align-items:stretch; flex-direction:column; padding:12px 15px; }
+  .sticky-save .primary-button { width:100%; }
+  .signature-pad-wrap { height:145px; }
+  .upload-drop { min-height:145px; }
+}
+
