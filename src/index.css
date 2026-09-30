@@ -3814,6 +3814,7 @@ html:not([data-theme="dark"]) .sidebar-collapse-row .sidebar-toggle svg {
   .upload-drop {
     min-height: 145px;
   }
+<<<<<<< HEAD
 }
 
 /* ---------- login page: green & white theme ---------- */
@@ -3845,4 +3846,6 @@ html:not([data-theme="dark"]) .sidebar-collapse-row .sidebar-toggle svg {
 }
 .auth-field:focus-within {
   box-shadow: 0 0 0 3px rgba(47, 158, 68, 0.18);
+=======
+>>>>>>> 7ef5dd145f1fc3d4f028b9f1a3b88289f06100e0
 }
