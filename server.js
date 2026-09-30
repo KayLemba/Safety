@@ -13,7 +13,7 @@ nextApp.prepare().then(async () => {
   } catch (error) {
     // Keep the web shell available during local setup or a database restart.
     // Authenticated API calls will return their normal database error response.
-    console.error("PostgreSQL is unavailable; starting the web shell anyway:", error.message);
+    console.error("Database is unavailable; starting the web shell anyway:", error.message);
   }
   api.all("*", (req, res) => handle(req, res));
   api.listen(port, "0.0.0.0", () => console.log(`Tactivo Safety Next.js listening on http://localhost:${port}`));
